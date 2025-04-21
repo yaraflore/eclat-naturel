@@ -1,110 +1,280 @@
-!DOCTYPE html> <html lang="fr"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Éclat Naturel</title> <style> body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #ffffff; color: #000; }
-css
-Copier
-Modifier
-header {
-  background-color: #ffffff;
-  color: #6b8e23;
-  text-align: center;
-  padding: 40px 20px;
-  border-bottom: 1px solid #eee;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Éclat Naturel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefcf8;
+      color: #333;
+      background-image: url('https://www.transparenttextures.com/patterns/cream-dust.png');
+    }
 
-header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
+    header {
+      background-color: #f5f5f5;
+      color: #2e3b2e;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 2px solid #dcdcdc;
+    }
 
-header p {
-  font-style: italic;
-  color: #ccc;
-  margin: 10px 0;
-}
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
 
-.slogan {
-  color: #a3c9a8;
-  margin-top: 10px;
-  font-weight: bold;
-}
+    header p {
+      font-style: italic;
+      color: #6b8e23;
+      margin: 10px 0;
+    }
 
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
+    .slogan {
+      color: #3e5d47;
+      margin-top: 10px;
+      font-weight: bold;
+    }
 
-.product {
-  background: white;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  width: 280px;
-  margin: 15px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease-in-out;
-}
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+    }
 
-.product:hover {
-  transform: scale(1.05);
-}
+    .product {
+      background: #ffffff;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      width: 300px;
+      padding: 25px 20px 40px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      position: relative;
+      text-align: center;
+    }
 
-.product img {
-  width: 100%;
-  border-radius: 8px;
-}
+    .product:hover {
+      transform: translateY(-7px);
+    }
 
-.product h3 {
-  margin: 10px 0 5px;
-}
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
 
-.product p {
-  color: #444;
-  font-size: 0.95em;
-}
+    .product:hover img {
+      transform: scale(1.03);
+    }
 
-.price {
-  color: #6b8e23;
-  font-weight: bold;
-}
+    .product h3 {
+      margin: 15px 0 10px;
+      color: #3a4d39;
+      font-size: 1.2em;
+    }
 
-footer {
-  background-color: #ffffff;
-  color: #6b8e23;
-  text-align: center;
-  padding: 30px 20px;
-  border-top: 1px solid #eee;
-}
+    .product p {
+      color: #555;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
 
-.contact-button {
-  background-color: #a3c9a8;
-  color: #000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  font-size: 1em;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
+    .price {
+      color: #a3c9a8;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
 
-.contact-button:hover {
-  background-color: #6b8e23;
-  color: #fff;
-}
+    .tag {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: #f0f9f0;
+      color: #3e5d47;
+      padding: 5px 10px;
+      font-size: 0.8em;
+      font-weight: bold;
+      border-radius: 5px;
+    }
 
-/* Background illustrations */
-.background-plants {
-  background-image: url('https://www.transparenttextures.com/patterns/soft-square.png');
-  background-size: cover;
-  opacity: 0.1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-</style> </head> <body> <div class="background-plants"></div> <header> <h1>Éclat Naturel</h1> <p>L'essence de la nature</p> <p class="slogan">Pureté, fraîcheur, éclat – 100% naturel</p> </header> <section class="products"> <div class="product"> <img src="https://via.placeholder.com/280x180?text=Baume+Naturel" alt="Baume Naturel"> <h3>Baume Lèvres Naturel</h3> <p>Hydrate et protège vos lèvres grâce à une recette 100% naturelle au beurre de karité.</p> <p class="price">6,50 €</p> </div> <div class="product"> <img src="https://via.placeholder.com/280x180?text=Huile+Végétale" alt="Huile Végétale"> <h3>Huile Soin Visage</h3> <p>Mélange d'huiles végétales pour une peau douce et éclatante, sans produit chimique.</p> <p class="price">12,00 €</p> </div> <div class="product"> <img src="https://via.placeholder.com/280x180?text=Savon+Artisanal" alt="Savon Artisanal"> <h3>Savon Artisanal</h3> <p>Fabriqué à la main avec des ingrédients bio, pour une sensation de pureté incomparable.</p> <p class="price">5,00 €</p> </div> </section> <footer> <p>Vous souhaitez commander ou en savoir plus ?</p> <a href="mailto:yaraflore791@gmail.com" class="contact-button">Me contacter</a> </footer> </body> </html>
+    .product-button {
+      display: inline-block;
+      background-color: #a3c9a8;
+      color: white;
+      padding: 8px 18px;
+      border: none;
+      border-radius: 20px;
+      font-size: 0.9em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .product-button:hover {
+      background-color: #8dbb91;
+    }
+
+    .about {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+      border-top: 2px solid #e5e5e5;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    .about h2 {
+      color: #3e5d47;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .gallery {
+      padding: 60px 20px;
+      background-color: #fefcf8;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      color: #3e5d47;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .gallery p {
+      margin-top: 20px;
+      color: #5a725e;
+      font-size: 1.05em;
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      color: #2e3b2e;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 2px solid #dcdcdc;
+    }
+
+    .contact-button {
+      background-color: #a3c9a8;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1em;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #8dbb91;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      width: 90%;
+      text-align: left;
+    }
+
+    .modal-close {
+      float: right;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .add-to-cart {
+      display: inline-block;
+      background-color: #ffce85;
+      color: #4e3e26;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #ffc266;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page content stays the same -->
+
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <p id="modalPrice" class="price"></p>
+      <div class="add-to-cart" onclick="alert('Fonction panier à venir 😊')">Ajouter au panier</div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(title, description, price) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDescription').innerText = description;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('productModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('productModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
